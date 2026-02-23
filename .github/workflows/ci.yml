@@ -3,7 +3,7 @@ name: vessel-2602-ci-node-workflow
 on:
   pull_request:
     branches:
-      - feature/*
+      - develop
 
 jobs:
   test:
@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
