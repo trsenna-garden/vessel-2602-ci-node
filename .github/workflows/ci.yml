@@ -24,3 +24,13 @@ jobs:
 
       - name: Execute tests
         run: yarn test
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: false
+          tags: trsenna/vessel-2602-ci-node:latest
