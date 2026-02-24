@@ -20,7 +20,7 @@ jobs:
           node-version: '24'
 
       - name: Install dependencies
-        run: yarn install
+        run: YARN_ENABLE_SCRIPTS=false yarn install
 
       - name: Execute tests
         run: yarn test
